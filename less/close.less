@@ -1,0 +1,69 @@
+//
+// * Flagwind.UI v1.0.0
+// * Copyright 2014 Flagwind Inc. All rights reserved.
+// * Licensed under the MIT License.
+// * https://github.com/Flagwind/Flagwind.UI/blob/master/LICENSE
+//
+
+
+/* ============================== 关闭按钮(Close) =========================== */
+
+.close
+{
+    display: inline-block;
+    text-align: center;
+    width: 24px;
+    font-size: 20px;
+    font-weight: @close-font-weight;
+    line-height: 24px;
+    color: @close-color;
+    text-shadow: @close-text-shadow;
+    opacity: .2;
+    transition: all .3s;
+
+    &:hover,
+    &:focus
+    {
+        color: @close-color;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: .5;
+        outline: none;
+    }
+}
+
+button.close
+{
+    padding: 0;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+a.close:hover
+{
+    color: inherit;
+}
+
+// 旋转
+.close-spin
+{
+    &:hover
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.close-alt
+{
+    border-radius: 50%;
+    background: @close-alt-background;
+    opacity: 0.5;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+
+    &:hover,
+    &:focus
+    {
+        opacity: 1;
+    }
+}

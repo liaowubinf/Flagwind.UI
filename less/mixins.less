@@ -1067,6 +1067,25 @@
     }
 }
 
+// ============================= 警告框(Alert) =========================== //
+
+
+//
+// #public 警告框样式。
+//
+
+.alert-variant(@background, @border, @color)
+{
+    background-color: @background;
+    border-color: @border;
+    color: @color;
+
+    .alert-link
+    {
+        color: darken(@color, 6%);
+    }
+}
+
 
 // ============================= 开关(Switch) =========================== //
 
