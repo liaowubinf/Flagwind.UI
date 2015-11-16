@@ -43,15 +43,40 @@
             }
         },
 
-        onCloseClick: function()
+        close: function()
         {
             var self = this;
-            this.$element.remove();
+
+            // 删除元素
+            var complete = function()
+            {
+                self.$element.remove();
+                self.onClose();
+            };
+
+            // 动画完毕执行回调函数
+            this.$element.animation
+            ({
+                animation: 'slide down in',
+                duration: this.options.duration,
+                noSupport: complete,
+                noComplete: complete
+                // complete: complete
+            });
+        },
+
+        onClose: function()
+        {
+            // 触发元素事件
+            this.$element.trigger("close" + this.options.eventSuffix);
+
+            // 调用回调函数
+            this.options.onClose.call(this);
         },
 
         bindEvents: function()
         {
-            this.$close.on('click' + this.options.eventSuffix, $.proxy(this.onCloseClick, this));
+            this.$close.on('click' + this.options.eventSuffix, $.proxy(this.close, this));
         }
     };
 
@@ -91,12 +116,20 @@
     {
         namespace: 'fw.alert',
         eventSuffix: '.alert',
+        duration: 250,
         selector:
         {
             close: '.close'
-        }
+        },
+        onClose : $.fw.empty
     };
 }(jQuery, window, document);
 
 // 调用插件
-$('.alert').alert();
+$('.alert').alert(
+{
+    onClose: function()
+    {
+        console.log('已关闭');
+    }
+});

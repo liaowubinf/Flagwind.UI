@@ -228,7 +228,7 @@ ul.dropdown-content
 }
 
 /*
- * 方向朝上的下拉组件。 
+ * 方向朝上的下拉组件。
  */
 
 .dropdown-up
@@ -250,7 +250,7 @@ ul.dropdown-content
     .dropdown-content
     {
         margin: 10px 0 0;
-        
+
         .angle-up-variant(@dropdown-border-color, @dropdown-bg, @angle-border-width);
 
         &:before,
@@ -340,7 +340,8 @@ ul.dropdown-content
 
     ul.dropdown-content
     {
-        max-height: 120px;
+        // max-height: 120px;
+        max-height: @dropdown-content-height * 3;
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -365,7 +366,7 @@ ul.dropdown-content
     {
         ul.dropdown-content
         {
-            max-height: 160px;
+            max-height: @dropdown-content-height * 4;
         }
     }
 }
@@ -380,7 +381,7 @@ ul.dropdown-content
     {
         ul.dropdown-content
         {
-            max-height: 240px;
+            max-height: @dropdown-content-height * 5;
         }
     }
 }
@@ -395,7 +396,7 @@ ul.dropdown-content
     {
         ul.dropdown-content
         {
-            max-height: 320px;
+            max-height: @dropdown-content-height * 6;
         }
     }
 }

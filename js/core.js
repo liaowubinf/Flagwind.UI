@@ -21,7 +21,7 @@
 
     $.fw = $.fw || {};
 
-    $.extend($.fw, 
+    $.extend($.fw,
     {
         /**
          * @public 版本号。
