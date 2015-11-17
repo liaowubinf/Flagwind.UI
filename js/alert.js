@@ -43,7 +43,7 @@
             }
         },
 
-        close: function()
+        close: function(callback)
         {
             var self = this;
 
@@ -57,11 +57,11 @@
             // 动画完毕执行回调函数
             this.$element.animation
             ({
-                animation: 'slide down in',
+                animation: 'fade out',
                 duration: this.options.duration,
+                queue: false,
                 noSupport: complete,
-                noComplete: complete
-                // complete: complete
+                onComplete: complete
             });
         },
 
@@ -116,7 +116,7 @@
     {
         namespace: 'fw.alert',
         eventSuffix: '.alert',
-        duration: 250,
+        duration: 1000,
         selector:
         {
             close: '.close'
