@@ -16,6 +16,7 @@
 	background-color: @alert-default-bg;
 	color: @alert-default-color;
 	border: 1px solid @alert-default-border;
+	word-break: break-all;
 
 	h4
 	{
@@ -52,11 +53,11 @@
 		float: right;
 		height: auto;
 		margin: -3px -5px auto auto;
-		opacity: .4;
+		.opacity(0.4);
 
 		&:hover
 		{
-			opacity: .6;
+			.opacity(0.6);
 		}
 	}
 }

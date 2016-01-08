@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>模态框</title>
+
+    <!-- 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../css/flagwind.css" />
+
+    <!-- HTML5 & Media Queries 兼容文件 -->
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="layout layout-fill">
+        <h2>点击按钮执行删除操作</h2>
+        <button class="btn btn-warning btn-block" data-target="#myModal">删除</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h4 class="modal-title">这里是标题</h4>
+                <button class="close close-spin">&times;</button>
+            </div>
+            <div class="modal-body">
+                body
+            </div>
+            <div class="modal-footer">
+                <button class="btn">close</button>
+                <button class="btn btn-primary">save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 核心js文件 -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/flagwind.min.js"></script>
+    <script>
+        $('#myModal').modal();
+    </script>
+</body>
+</html>

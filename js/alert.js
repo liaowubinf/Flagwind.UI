@@ -126,10 +126,10 @@
 }(jQuery, window, document);
 
 // 调用插件
-$('.alert').alert(
-{
-    onClose: function()
-    {
-        console.log('已关闭');
-    }
-});
+// $('.alert').alert(
+// {
+//     onClose: function()
+//     {
+//         console.log('已关闭');
+//     }
+// });
