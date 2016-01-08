@@ -8,3 +8,4 @@
 // @codekit-append "core.js";
 // @codekit-append "animation.js";
 // @codekit-append "dropdown.js";
+// @codekit-append "alert.js";

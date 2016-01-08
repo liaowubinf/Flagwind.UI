@@ -1,0 +1,100 @@
+//
+// * Flagwind.UI v1.0.0
+// * Copyright 2014 Flagwind Inc. All rights reserved.
+// * Licensed under the MIT License.
+// * https://github.com/Flagwind/Flagwind.UI/blob/master/LICENSE
+//
+
+
+/* ============================== 模态框(Modal) =========================== */
+
+.modal
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @zindex-modal;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    display: none;
+
+    .modal-dialog
+    {
+        position: relative;
+        margin: 10px;
+        background-color: @modal-bg;
+        border: 1px solid @modal-border-color;
+        border-radius: @modal-border-radius;
+        .box-shadow(0 3px 9px rgba(0,0,0,.5));
+        word-break: break-all;
+
+        .modal-header
+        {
+            position: relative;
+            padding: @modal-title-padding;
+            border-bottom: 1px solid @modal-header-border-color;
+            min-height: (@modal-title-padding + @modal-title-line-height);
+        }
+
+        .modal-title
+        {
+            margin: 0;
+            line-height: @modal-title-line-height;
+        }
+
+        .close
+        {
+            position: absolute;
+            top: 12px;
+            right: 4px;
+
+            .opacity(0.4);
+
+            &:hover
+            {
+                .opacity(0.6);
+            }
+        }
+
+        .modal-body
+        {
+            padding: @modal-inner-padding;
+        }
+
+        .modal-footer
+        {
+            padding: @modal-inner-padding;
+            border-top: 1px solid @modal-footer-border-color;
+            &:extend(.clear all);
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min)
+{
+    .modal
+    {
+        .modal-dialog
+        {
+            width: @modal-md;
+            margin: 30px auto;
+        }
+    }
+
+    .modal-sm
+    {
+        width: @modal-sm;
+    }
+}
+
+@media (min-width: @screen-md-min)
+{
+    .modal-lg
+    {
+        width: @modal-lg;
+    }
+}

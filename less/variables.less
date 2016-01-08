@@ -67,7 +67,9 @@
 // * 状态颜色
 //
 
+@state-primary-text:              #fff;
 @state-primary-bg:                @color-primary;
+@state-primary-border:            darken(spin(@state-primary-bg, -20), 5%);
 
 @state-success-text:              #3c763d;
 @state-success-bg:                #dff0d8;
@@ -350,9 +352,8 @@
 @dropdown-item-space:             5px;
 @dropdown-header-color:           @color-gray-light;
 @dropdown-caret-color:            darken(@dropdown-border-color, 5%);
-
 //@dropdown-animation:             slide-top-fixed;
-
+@dropdown-content-height:         40px;
 
 //
 // * 分页
@@ -364,6 +365,79 @@
 @pagination-hover-bg:             @color-gray-lighter; // 鼠标悬浮背景色
 @pagination-border-radius:        15px;                // 左右分布圆角边框
 
+//
+// * 关闭按钮
+//
+
+@close-font-weight:               blod;
+@close-color:                     #000;
+@close-text-shadow:               0 1px 0 #fff;
+@close-alt-background:            #eee;
+
+//
+// * 警告框
+//
+
+@alert-padding:                   15px;
+@alert-border-radius:             @border-radius-md;
+
+@alert-link-font-weight:          bold;
+
+@alert-default-color:             #333;
+@alert-default-bg:                #fff;
+@alert-default-border:            #ccc;
+
+@alert-primary-bg:                @state-primary-bg;
+@alert-primary-border:            @state-primary-border;
+@alert-primary-color:             @state-primary-text;
+
+@alert-secondary-bg:              @state-secondary-bg;
+@alert-secondary-border:          #aaa;
+@alert-secondary-color:           #666;
+
+@alert-success-bg:                @state-success-bg;
+@alert-success-border:            @state-success-border;
+@alert-success-color:             @state-success-text;
+
+@alert-warning-bg:                @state-warning-bg;
+@alert-warning-border:            @state-warning-border;
+@alert-warning-color:             @state-warning-text;
+
+@alert-danger-bg:                 @state-danger-bg;
+@alert-danger-border:             @state-danger-border;
+@alert-danger-color:              @state-danger-text;
+
+
+//
+// nav
+//
+
+@nav-link-padding:                10px 15px;
+@nav-link-hover-bg:               @color-gray-lighter;
+@nav-tabs-border-color:           #ddd;
+@nav-tabs-link-hover-border-color:@color-gray-lighter;
+@nav-tabs-active-link-hover-bg:   @body-color;
+@nav-tabs-active-link-hover-color:@color-gray;
+@nav-tabs-active-link-hover-border-color:   #ddd;
+
+//
+// * 模态框
+//
+
+@modal-sm:                        300px;
+@zindex-modal:                    1050;
+@modal-bg:                        #fff;
+@modal-border-color:              rgba(0,0,0,.2);
+@modal-border-radius:             @border-radius-lg;
+@modal-title-padding:             15px;
+@modal-title-line-height:         @line-height-md;
+@modal-inner-padding:             15px;
+@modal-header-border-color:       #e5e5e5;
+@modal-footer-border-color:       @modal-header-border-color;
+
+@modal-lg:                        900px;
+@modal-md:                        600px;
+@modal-sm:                        300px;
 
 //
 // * 开关
